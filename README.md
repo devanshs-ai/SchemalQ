@@ -23,6 +23,23 @@ InsightSQL is an intelligent analytics assistant that allows you to query your d
 - [React 19](https://react.dev/)
 - [Vite](https://vitejs.dev/)
 
+## 🏗️ Architecture
+
+```mermaid
+graph TD
+    User([User]) -->|Natural Language Query| Frontend[React Frontend]
+    Frontend -->|API Requests| Backend[FastAPI Backend]
+    
+    Backend -->|Schema & Prompt| LLM[LLM Service]
+    LLM -->|Generated SQL| Backend
+    
+    Backend -->|Execute Query| DB[(PostgreSQL)]
+    DB -->|Query Results| Backend
+    
+    Backend <-->|Cache Queries/Results| Redis[(Redis)]
+    Backend -->|Insights & Data| Frontend
+```
+
 ## 📦 Project Structure
 
 ```
