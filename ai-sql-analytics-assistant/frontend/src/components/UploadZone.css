@@ -1,0 +1,92 @@
+.upload-zone {
+  border: 2px dashed var(--border-bright);
+  border-radius: var(--radius-xl);
+  padding: 60px 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  background: var(--bg-card);
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-zone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, var(--primary-glow), transparent 70%);
+  opacity: 0;
+  transition: opacity var(--transition-slow);
+}
+
+.upload-zone:hover::before,
+.upload-zone.dragging::before {
+  opacity: 1;
+}
+
+.upload-zone:hover,
+.upload-zone.dragging {
+  border-color: var(--primary);
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.upload-zone.loading {
+  cursor: not-allowed;
+  border-style: solid;
+  border-color: var(--primary);
+  animation: pulse-glow 2s ease infinite;
+}
+
+.upload-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  filter: grayscale(0.3);
+}
+
+.upload-idle h3 {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.upload-idle p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.upload-hint {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.upload-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.upload-loading p {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+.progress-bar {
+  width: 240px;
+  height: 4px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}

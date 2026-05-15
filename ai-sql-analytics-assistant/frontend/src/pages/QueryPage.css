@@ -1,0 +1,10 @@
+.query-page-container { max-width: 900px; }
+
+.query-loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 20px 0;
+}

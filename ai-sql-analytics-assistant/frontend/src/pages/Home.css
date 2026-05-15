@@ -1,0 +1,57 @@
+.home-eyebrow { margin-bottom: 12px; }
+
+.upload-section {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.error-detail {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+}
+
+.upload-success { display: flex; flex-direction: column; gap: 16px; }
+
+.post-upload-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 64px;
+}
+
+.feature-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform var(--transition);
+}
+
+.feature-card:hover {
+  transform: translateY(-3px);
+}
+
+.feature-icon { font-size: 1.6rem; }
+
+.feature-card h4 {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.feature-card p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}

@@ -1,0 +1,108 @@
+.schema-preview {
+  margin-top: 32px;
+}
+
+.schema-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.schema-header h3 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.schema-meta {
+  font-size: 0.83rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  font-family: var(--font-mono);
+}
+
+.schema-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.schema-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: var(--glass-border);
+}
+
+.schema-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.schema-table th {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: rgba(0,0,0,0.3);
+  border-bottom: 1px solid var(--border);
+}
+
+.schema-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: var(--text-secondary);
+}
+
+.schema-table tr:last-child td { border-bottom: none; }
+
+.schema-table tr:hover td {
+  background: rgba(255,255,255,0.02);
+}
+
+.col-pos {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+}
+
+.col-name {
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.type-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  background: var(--accent-glow);
+  color: var(--accent);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  border: 1px solid rgba(34,211,238,0.2);
+}
+
+.null-yes { color: var(--text-muted); font-size: 0.82rem; }
+.null-no  { color: var(--error); font-size: 0.82rem; font-weight: 600; }
+
+.col-samples { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.col-samples code {
+  display: inline-block;
+  padding: 1px 6px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
